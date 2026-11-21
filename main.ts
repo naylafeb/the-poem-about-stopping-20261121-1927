@@ -11,5 +11,9 @@ Nothing is finished. Nothing has to be.
 I stay where the light is, and let
 the hour pass without me in it.`;
 
-mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", TEXT, "utf8");
+// Where the entry goes: the grader reads /output/entry.txt.
+const OUTPUT_DIR = "/output";
+const OUTPUT_FILE = `${OUTPUT_DIR}/entry.txt`;
+
+mkdirSync(OUTPUT_DIR, { recursive: true });
+writeFileSync(OUTPUT_FILE, TEXT, "utf8");
